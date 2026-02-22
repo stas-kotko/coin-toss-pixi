@@ -1,4 +1,4 @@
-import { API } from "../server/Api";
+import { API } from "../Api";
 import { CoinSide } from "../types";
 import { BaseState } from "./BaseState";
 import { StateId } from "./StateMachine";
@@ -25,7 +25,7 @@ export class IdleState extends BaseState {
 
 	private _serverErrorHandler(err: Error) {
 		this._stateMachine.setState(StateId.Idle);
-		throw new Error(`Server responded with error: ${err.message}`)
+		throw new Error(`Server responded with error: ${err.message}`);
 	}
 
 	exit(): void {

@@ -1,8 +1,8 @@
 import { Application, Container } from "pixi.js";
 import { AppEvents } from "./AppEvents";
 import { IS_DEBUG, IS_MUTED, VIEWPORT_SIZE } from "./config";
-import { GameModel } from "./models/GameModel";
-import { soundMap, Sounds } from "./services/Sounds";
+import { GameModel } from "./GameModel";
+import { soundMap, Sounds } from "./Sounds";
 import { StateMachine } from "./states/StateMachine";
 import { ViewportScaler } from "./utils/ViewportScaler";
 import { GameView } from "./views/GameView";

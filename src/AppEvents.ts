@@ -1,4 +1,4 @@
-import { AudioId } from "./services/Sounds";
+import { AudioId } from "./Sounds";
 import { StateId } from "./states/StateMachine";
 import { CoinSide } from "./types";
 import { Signal } from "./utils/Signal";

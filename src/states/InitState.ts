@@ -1,4 +1,4 @@
-import { AudioId } from "../services/Sounds";
+import { AudioId } from "../Sounds";
 import { BaseState } from "./BaseState";
 import { StateId } from "./StateMachine";
 

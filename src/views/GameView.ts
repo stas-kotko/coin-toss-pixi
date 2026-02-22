@@ -1,15 +1,15 @@
 import Confetti from "js-confetti";
 import { Container, DestroyOptions } from "pixi.js";
+import { AppEvents } from "../AppEvents";
+import { LOSE_TEXT, WIN_TEXT } from "../config";
+import { GameModel } from "../GameModel";
+import { AudioId } from "../Sounds";
 import { StateId } from "../states/StateMachine";
 import { CoinSide, RoundResult } from "../types";
 import { Button, ButtonOptions } from "./components/Button";
 import { Coin } from "./components/Coin";
 import { Modal } from "./components/Modal";
-import { LOSE_TEXT, WIN_TEXT } from "../config";
 import { GAME_VIEW_LAYOUT } from "./gameLayout";
-import { GameModel } from "../models/GameModel";
-import { AppEvents } from "../AppEvents";
-import { AudioId } from "../services/Sounds";
 
 export class GameView extends Container {
 	public readonly appStage: Container;

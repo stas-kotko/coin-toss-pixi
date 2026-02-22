@@ -1,5 +1,5 @@
 import { AppEvents } from "../AppEvents";
-import { GameModel } from "../models/GameModel";
+import { GameModel } from "../GameModel";
 import { StateId } from "../types";
 import { BaseState } from "./BaseState";
 import { CoinFlightState } from "./CoinFlightState";

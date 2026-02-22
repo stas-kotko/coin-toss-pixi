@@ -1,5 +1,5 @@
 import { SHOW_RESULT_DURATION } from "../config";
-import { AudioId } from "../services/Sounds";
+import { AudioId } from "../Sounds";
 import { RoundResult } from "../types";
 import { BaseState } from "./BaseState";
 import { StateId } from "./StateMachine";
