@@ -1,6 +1,6 @@
 import { Application, Container } from "pixi.js";
 import { AppEvents } from "./AppEvents";
-import { IS_DEBUG, VIEWPORT_SIZE } from "./config";
+import { IS_DEBUG, IS_MUTED, VIEWPORT_SIZE } from "./config";
 import { GameModel } from "./models/GameModel";
 import { soundMap, Sounds } from "./services/Sounds";
 import { StateMachine } from "./states/StateMachine";
@@ -21,6 +21,9 @@ export class Game {
 		this.app = app;
 
 		this.sounds = new Sounds(soundMap);
+		this.appEvents.playSound.add(this.sounds.playAudio, this.sounds);
+		this.appEvents.stopSound.add(this.sounds.stopAudio, this.sounds);
+		this.sounds.setMute(IS_MUTED);
 
 		const gameView = new GameView(app.stage, this.gameModel, this.appEvents);
 		this.gameView = gameView;

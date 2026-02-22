@@ -5,11 +5,11 @@ A browser-based coin toss game built with PixiJS and TypeScript. Pick heads or t
 ## Launch
 
 ```bash
-# Terminal 1 — API server (port 3000)
-pnpm server
+# Terminal 1 — start API server (port 3000)
+npm run server
 
-# Terminal 2 — dev client (port 8080)
-pnpm dev
+# Terminal 2 — start dev client (port 8080)
+npm run dev
 ```
 
 ## Configuration
@@ -17,6 +17,10 @@ pnpm dev
 Artificial response latency can be adjusted in [server.js](server.js).
 
 Client-side settings (viewport size, result display duration, etc...) live in [src/config.ts](src/config.ts).
+
+## Audio
+
+To turn on music, set `IS_MUTED` flag to `true` in [src/config.ts](src/config.ts)
 
 ## Architecture
 

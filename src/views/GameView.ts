@@ -9,6 +9,7 @@ import { LOSE_TEXT, WIN_TEXT } from "../config";
 import { GAME_VIEW_LAYOUT } from "./gameLayout";
 import { GameModel } from "../models/GameModel";
 import { AppEvents } from "../AppEvents";
+import { AudioId } from "../services/Sounds";
 
 export class GameView extends Container {
 	public readonly appStage: Container;
@@ -145,6 +146,7 @@ export class GameView extends Container {
 	}
 
 	btnHandler(side: CoinSide) {
+		this.appEvents.playSound.emit(AudioId.ButtonClick);
 		this.appEvents.chooseSide.emit(side);
 	}
 
