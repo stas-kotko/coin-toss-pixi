@@ -1,5 +1,5 @@
-import { SERVER_URL } from "../config";
-import { CoinSide, TossResponse } from "../types";
+import { SERVER_URL } from "./config";
+import { CoinSide, TossResponse } from "./types";
 
 class Api {
 	async toss(): Promise<CoinSide> {

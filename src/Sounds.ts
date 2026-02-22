@@ -1,5 +1,5 @@
 import { Howl, HowlOptions } from "howler";
-import { BG_MUSIC_VOLUME } from "../config";
+import { BG_MUSIC_VOLUME } from "./config";
 
 const PATH_TO_ASSETS = "/assets/sounds/";
 
