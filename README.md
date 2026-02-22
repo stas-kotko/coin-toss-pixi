@@ -24,4 +24,4 @@ To turn on music, set `IS_MUTED` flag to `true` in [src/config.ts](src/config.ts
 
 ## Architecture
 
-The app follows an MVC structure with a finite state machine at its core. Game states (`Init`, `Idle`, `CoinFlight`, `Result`) are managed by `StateMachine`, which drives transitions and keeps `GameModel` as the single source of truth. Views are pure PixiJS display objects that react to state changes via a shared event bus (`mitt`). Coin animation is handled through Spine, and audio through Howler.
+The app follows an MVC structure with a finite state machine at its core. Game states (`Init`, `Idle`, `CoinFlight`, `Result`) are managed by `StateMachine`, which drives transitions and keeps `GameModel` as the single source of truth. Views are pure PixiJS display objects that react to state changes via a shared event system. Coin animation is handled through Spine, and audio through Howler.
