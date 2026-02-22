@@ -17,6 +17,4 @@ export class CoinFlightState extends BaseState {
 
 		this._stateMachine.setState(StateId.Result);
 	}
-
-	public exit(): void {}
 }

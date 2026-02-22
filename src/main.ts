@@ -14,10 +14,6 @@ import { IS_DEBUG } from "./config";
 		Logger.useDefaults();
 	}
 
-	// Sounds.load({
-	// 	src: "/assets/sounds/button.wav",
-	// });
-
 	await Assets.load([
 		{ src: "/assets/spine/coin/coin-pro.json", alias: "skeleton-data" },
 		{ src: "/assets/spine/coin/coin-pma.atlas", alias: "skeleton-atlas" },
