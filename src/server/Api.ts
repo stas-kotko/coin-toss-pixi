@@ -3,9 +3,16 @@ import { CoinSide, TossResponse } from "../types";
 
 class Api {
 	async toss(): Promise<CoinSide> {
-		const res = await fetch(`${SERVER_URL}/api/toss`);
-		const { result } = await (res.json() as Promise<TossResponse>);
-		return result;
+		try {
+			const res = await fetch(`${SERVER_URL}/api/toss`);
+			if (!res.ok) {
+				throw new Error(`Server error: ${res.status} ${res.statusText}`);
+			}
+			const { result } = await (res.json() as Promise<TossResponse>);
+			return result;
+		} catch (err) {
+			throw new Error(`Toss request failed: ${err instanceof Error ? err.message : err}`);
+		}
 	}
 }
 
