@@ -1,17 +1,11 @@
 import { AppEvents } from "../AppEvents";
 import { GameModel } from "../models/GameModel";
+import { StateId } from "../types";
 import { BaseState } from "./BaseState";
 import { CoinFlightState } from "./CoinFlightState";
 import { IdleState } from "./IdleState";
 import { InitState } from "./InitState";
 import { ResultState } from "./ResultState";
-
-export enum StateId {
-	Init = "init",
-	Idle = "idle",
-	Result = "result",
-	CoinFlight = "coinFlight",
-}
 
 export class StateMachine {
 	public readonly gameModel: GameModel;
@@ -52,3 +46,4 @@ export class StateMachine {
 		this._currentState.enter();
 	}
 }
+export { StateId };

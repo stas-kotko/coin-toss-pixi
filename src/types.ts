@@ -1,3 +1,10 @@
+export enum StateId {
+	Init = "init",
+	Idle = "idle",
+	Result = "result",
+	CoinFlight = "coinFlight",
+}
+
 export enum CoinSide {
 	HEADS = "heads",
 	TAILS = "tails",
@@ -5,7 +12,7 @@ export enum CoinSide {
 
 export enum RoundResult {
 	WIN = "win",
-	LOSE = "LOSE",
+	LOSE = "lose",
 }
 
 export interface TossResponse {

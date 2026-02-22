@@ -3,7 +3,6 @@ import { Container, Graphics, Text } from "pixi.js";
 export class Modal extends Container {
 	protected _bg = new Graphics();
 	protected _text: Text;
-	protected _timeout = 0;
 
 	constructor() {
 		super();

@@ -21,6 +21,6 @@ export class IdleState extends BaseState {
 
 	exit(): void {
 		super.exit();
-		this._stateMachine.appEvents.chooseSide.remove(this._onSideChosen);
+		this._stateMachine.appEvents.chooseSide.remove(this._onSideChosen, this);
 	}
 }
