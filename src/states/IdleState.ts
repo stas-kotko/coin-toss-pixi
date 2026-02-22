@@ -12,11 +12,20 @@ export class IdleState extends BaseState {
 	public _onSideChosen(side: CoinSide) {
 		this._stateMachine.gameModel.playersChoice = side;
 
-		API.toss().then((result) => {
-			this._stateMachine.appEvents.serverResponse.emit(result);
-		});
+		API.toss()
+			.then((result) => this._gameResultHandler(result))
+			.catch((err) => this._serverErrorHandler(err));
 
 		this._stateMachine.setState(StateId.CoinFlight);
+	}
+
+	private _gameResultHandler(result: CoinSide) {
+		this._stateMachine.appEvents.serverResponse.emit(result);
+	}
+
+	private _serverErrorHandler(err: Error) {
+		this._stateMachine.setState(StateId.Idle);
+		throw new Error(`Server responded with error: ${err.message}`)
 	}
 
 	exit(): void {
