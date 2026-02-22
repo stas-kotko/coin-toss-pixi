@@ -115,14 +115,14 @@ export class GameView extends Container {
 				this._modal.visible = false;
 				this._headsBtn.enable();
 				this._tailsBtn.enable();
-				this._coin.startSpinAnimation(1);
+				this._coin.startSpinAnimation(0.5);
 				break;
 			}
 
 			case StateId.CoinFlight: {
 				this._headsBtn.disable();
 				this._tailsBtn.disable();
-				this._coin.setSpinSpeed(5);
+				this._coin.setSpinSpeed(6);
 				break;
 			}
 
