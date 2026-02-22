@@ -129,11 +129,9 @@ export class GameView extends Container {
 			case StateId.Result: {
 				this._modal.visible = true;
 
-				const result = this.gameModel.roundResult;
+				this._coin.stopAt(this.gameModel.tossResult!);
 
-				this._coin.stopAt(this.gameModel.playersChoice!);
-
-				if (result === RoundResult.WIN) {
+				if (this.gameModel.roundResult === RoundResult.WIN) {
 					this.confetti.addConfetti();
 					this._modal.setText(WIN_TEXT);
 				} else {

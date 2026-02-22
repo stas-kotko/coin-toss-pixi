@@ -13,6 +13,7 @@ export class CoinFlightState extends BaseState {
 
 		const { gameModel } = this._stateMachine;
 
+		gameModel.tossResult = tossResult;
 		gameModel.roundResult = gameModel.playersChoice === tossResult ? RoundResult.WIN : RoundResult.LOSE;
 
 		this._stateMachine.setState(StateId.Result);
