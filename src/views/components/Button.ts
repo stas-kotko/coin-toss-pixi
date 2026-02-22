@@ -130,6 +130,11 @@ export class Button extends Container {
 
 	destroy(options?: DestroyOptions): void {
 		this.off("pointerdown", this._onPointerDown, this);
+		this.off("pointerup", this._onPointerUp, this);
+		this.off("pointerover", this._onPointerOver, this);
+		this.off("pointerout", this._onPointerOut, this);
+		this.off("pointerupoutside", this._onPointerOut, this);
+
 		this.onClickSignal.removeAll();
 
 		super.destroy(options);
